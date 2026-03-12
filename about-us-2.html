@@ -1,49 +1,51 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | BUILT-MORE Contracting</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet">
-<style>
-body { font-family: 'Inter', sans-serif; }
-/* Holographic OS Effects */
-@keyframes scanline {
-0% { transform: translateY(-100%); }
-100% { transform: translateY(100vh); }
-}
-.holo-grid {
-background-size: 50px 50px;
-background-image:
-linear-gradient(to right, rgba(234, 88, 12, 0.05) 1px, transparent 1px),
-linear-gradient(to bottom, rgba(234, 88, 12, 0.05) 1px, transparent 1px);
-transform: perspective(1000px) rotateX(60deg) translateY(-100px) translateZ(-200px);
-transform-origin: top center;
-animation: holoPulse 4s ease-in-out infinite alternate;
-}
-.holo-scan {
-animation: scanline 8s linear infinite;
-}
-@keyframes holoPulse {
-0% { opacity: 0.2; }
-100% { opacity: 0.5; }
-}
-@keyframes float3D {
-0% { transform: translateY(0px) rotateX(0deg); }
-50% { transform: translateY(-15px) rotateX(1deg); }
-100% { transform: translateY(0px) rotateX(0deg); }
-}
-.animate-float-3d {
-animation: float3D 8s ease-in-out infinite;
-}
-</style></head>
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | BUILT-MORE Contracting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Holographic OS Effects */
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100vh); }
+        }
+        .holo-grid {
+            background-size: 50px 50px;
+            background-image:
+                linear-gradient(to right, rgba(234, 88, 12, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(234, 88, 12, 0.05) 1px, transparent 1px);
+            transform: perspective(1000px) rotateX(60deg) translateY(-100px) translateZ(-200px);
+            transform-origin: top center;
+            animation: holoPulse 4s ease-in-out infinite alternate;
+        }
+        .holo-scan {
+            animation: scanline 8s linear infinite;
+        }
+        @keyframes holoPulse {
+            0% { opacity: 0.2; }
+            100% { opacity: 0.5; }
+        }
+        @keyframes float3D {
+            0% { transform: translateY(0px) rotateX(0deg); }
+            50% { transform: translateY(-15px) rotateX(1deg); }
+            100% { transform: translateY(0px) rotateX(0deg); }
+        }
+        .animate-float-3d {
+            animation: float3D 8s ease-in-out infinite;
+        }
+    </style>
+</head>
 <body class="antialiased selection:bg-orange-600/30 selection:text-orange-900 text-slate-900 bg-slate-50 relative">
 
     <!-- Navigation -->
     <nav class="fixed w-full z-40 top-0 border-b border-white/10 bg-slate-900/80 backdrop-blur-md transition-all">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity" onclick="window.scrollTo(0,0)">
-                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/9a52d9e8-ed3b-431a-81c0-d76aa744263d_800w.png" alt="Built-More General Contractor Logo" class="sm:h-12 w-auto h-10 object-contain bg-transparent">
+                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/9a52d9e8-ed3b-431a-81c0-d76aa744263d_800w.png" alt="Built-More General Contractor Logo" class="sm:h-12 cursor-pointer bg-transparent w-auto h-10 object-contain" onclick="window.location.href='/home'" role="button">
             </div>
             <div class="hidden lg:flex items-center gap-8 text-base text-slate-300">
                 <a href="#" class="text-white transition-colors">About Us</a>
@@ -131,7 +133,7 @@ animation: float3D 8s ease-in-out infinite;
 
                 <!-- Visual -->
                 <div class="relative rounded-2xl overflow-hidden shadow-2xl group border border-slate-200 sticky top-32">
-                    <img src="https://images.unsplash.com/photo-1541888086-2d1566f1bfa4?q=80&amp;w=1470&amp;auto=format&amp;fit=crop" alt="Commercial Construction Site" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" alt="Commercial Construction Site" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700">
                     <div class="bg-center bg-[url(https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=1600&amp;q=80)] bg-cover absolute top-0 right-0 bottom-0 left-0"></div>
                     
                     <div class="absolute bottom-8 left-8 right-8 text-white">
