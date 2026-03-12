@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | BUILT-MORE Contracting</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; }
+/* Holographic OS Effects */
+@keyframes scanline {
+0% { transform: translateY(-100%); }
+100% { transform: translateY(100vh); }
+}
+.holo-grid {
+background-size: 50px 50px;
+background-image:
+linear-gradient(to right, rgba(234, 88, 12, 0.05) 1px, transparent 1px),
+linear-gradient(to bottom, rgba(234, 88, 12, 0.05) 1px, transparent 1px);
+transform: perspective(1000px) rotateX(60deg) translateY(-100px) translateZ(-200px);
+transform-origin: top center;
+animation: holoPulse 4s ease-in-out infinite alternate;
+}
+.holo-scan {
+animation: scanline 8s linear infinite;
+}
+@keyframes holoPulse {
+0% { opacity: 0.2; }
+100% { opacity: 0.5; }
+}
+@keyframes float3D {
+0% { transform: translateY(0px) rotateX(0deg); }
+50% { transform: translateY(-15px) rotateX(1deg); }
+100% { transform: translateY(0px) rotateX(0deg); }
+}
+.animate-float-3d {
+animation: float3D 8s ease-in-out infinite;
+}
+</style></head>
+<body class="antialiased selection:bg-orange-600/30 selection:text-orange-900 text-slate-900 bg-slate-50 relative">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 top-0 border-b border-white/10 bg-slate-900/80 backdrop-blur-md transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity" onclick="window.scrollTo(0,0)">
+                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/9a52d9e8-ed3b-431a-81c0-d76aa744263d_800w.png" alt="Built-More General Contractor Logo" class="sm:h-12 w-auto h-10 object-contain bg-transparent">
+            </div>
+            <div class="hidden lg:flex items-center gap-8 text-base text-slate-300">
+                <a href="#" class="text-white transition-colors">About Us</a>
+                <a href="#history" class="hover:text-white transition-colors">Our History</a>
+                <a href="#credentials" class="hover:text-white transition-colors">Licensing &amp; Credentials</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="tel:6159152075" class="hidden md:flex items-center gap-2 text-base text-slate-300 hover:text-white transition-colors">
+                    <iconify-icon icon="solar:phone-linear" width="20" height="20"></iconify-icon>
+                    (615) 915-2075
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Us Hero Section -->
+    <section class="lg:pt-48 lg:pb-32 overflow-hidden bg-slate-950 pt-32 pb-20 relative">
+        <!-- 3D Holographic Environment -->
+        <div class="absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none">
+            <div class="absolute inset-0 h-[200%] -top-[50%] w-[200%] -left-[50%] holo-grid"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-orange-600/5 blur-[120px] rounded-full"></div>
+            
+            <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] text-orange-500/20 drop-shadow-[0_0_15px_rgba(234,88,12,0.3)] animate-float-3d" viewBox="0 0 800 600" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M400 100 L650 250 L650 450 L400 600 L150 450 L150 250 Z" class="animate-pulse" stroke-dasharray="4 4"></path>
+                <path d="M400 150 L600 270 L600 430 L400 550 L200 430 L200 270 Z"></path>
+                <path d="M400 150 L400 550 M200 270 L600 430 M200 430 L600 270" opacity="0.3"></path>
+            </svg>
+
+            <div class="absolute inset-0 w-full h-8 bg-gradient-to-b from-transparent via-orange-500/10 to-transparent holo-scan blur-sm mix-blend-screen"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#020617_80%)]"></div>
+        </div>
+
+        <div class="z-10 text-center max-w-5xl mr-auto ml-auto pr-6 pl-6 relative">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/80 border border-orange-500/30 backdrop-blur-md text-xs sm:text-sm text-orange-400 mb-8 shadow-[0_0_15px_rgba(234,88,12,0.2)]">
+                <span class="w-2 h-2 rounded-full bg-orange-500 shadow-[0_0_5px_rgba(234,88,12,0.8)]"></span>
+                Est. 1990s • Corporate Overview
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-medium text-white tracking-tight leading-tight mb-6 drop-shadow-2xl">
+                Building With Integrity.<br class="hidden md:block"> Delivering With Precision.
+            </h1>
+            <p class="text-base sm:text-lg md:text-2xl text-slate-400 max-w-3xl mx-auto drop-shadow-md">
+                Built-More LLC is a premier national commercial general contracting firm. For decades, we have partnered with the world's leading brands to construct facilities that perform flawlessly.
+            </p>
+        </div>
+    </section>
+
+    <!-- Comprehensive History Section -->
+    <section class="bg-white border-slate-200 border-b pt-24 pb-24" id="history">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 gap-x-16 gap-y-16 items-start">
+                
+                <!-- Content -->
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-slate-900"></span>
+                        <span class="text-xs sm:text-sm text-slate-500 uppercase tracking-widest">Our History</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-medium tracking-tight text-slate-900 mb-6 leading-tight">
+                        A Legacy of Commercial Construction Excellence
+                    </h2>
+                    
+                    <div class="space-y-6 text-base sm:text-lg text-slate-600 leading-relaxed">
+                        <p class="">
+                            Founded on the principles of hard work, uncompromising safety, and absolute transparency, Built-More LLC has grown from a regional builder into a highly sought-after national commercial contractor. With deep roots in the Nashville, TN area (615), our operational footprint now spans across the continental United States.
+                        </p>
+                        <p class="">
+                            We specialize in highly technical, fast-track commercial projects including multi-unit restaurant franchises, high-end retail buildouts, state-of-the-art fitness centers, and corporate office facilities. Our team understands that in commercial construction, time is revenue. We engineer our schedules and manage our supply chains to ensure your doors open on time, every time.
+                        </p>
+                        <p class="">
+                            Our leadership team brings decades of combined field and management experience. We don't just oversee projects; we actively drive them. By maintaining a network of elite subcontractors and adhering to rigorous internal quality controls, Built-More ensures that the final product exceeds architectural specifications and client expectations alike.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6 pt-10 mt-10 border-t border-slate-100">
+                        <div>
+                            <div class="text-4xl font-medium tracking-tight text-slate-900 mb-2">Nationwide</div>
+                            <div class="text-xs sm:text-sm text-slate-500 uppercase tracking-widest">Service Area</div>
+                        </div>
+                        <div class="">
+                            <div class="text-4xl font-medium tracking-tight text-slate-900 mb-2">1000+</div>
+                            <div class="text-xs sm:text-sm text-slate-500 uppercase tracking-widest">Projects Completed</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual -->
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl group border border-slate-200 sticky top-32">
+                    <img src="https://images.unsplash.com/photo-1541888086-2d1566f1bfa4?q=80&amp;w=1470&amp;auto=format&amp;fit=crop" alt="Commercial Construction Site" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="bg-center bg-[url(https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=1600&amp;q=80)] bg-cover absolute top-0 right-0 bottom-0 left-0"></div>
+                    
+                    <div class="absolute bottom-8 left-8 right-8 text-white">
+                        <div class="flex items-center gap-2 mb-2">
+                            <iconify-icon icon="solar:star-linear" width="20" height="20" class="text-orange-500"></iconify-icon>
+                            <span class="text-xs sm:text-sm uppercase tracking-widest text-orange-400">Our Commitment</span>
+                        </div>
+                        <p class="text-xl tracking-tight">"We build the structures that house your success. Quality is not an option; it is our baseline."</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-24 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-medium tracking-tight text-slate-900 mb-4">Core Operational Values</h2>
+                <p class="text-base sm:text-lg text-slate-600">The foundational pillars that guide our project management, field execution, and corporate relationships.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Value 1 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 hover:border-orange-500/50 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center text-orange-600 mb-6">
+                        <iconify-icon icon="solar:shield-linear" width="24" height="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-medium text-slate-900 mb-2 tracking-tight">Uncompromising Integrity</h3>
+                    <p class="text-base text-slate-500 leading-relaxed">Honesty in every bid, transparency in every change order, and ethical conduct on every job site. We build trust before we build walls.</p>
+                </div>
+                <!-- Value 2 -->
+                <div class="hover:border-orange-500/50 hover:shadow-xl hover:-translate-y-1 transition-all bg-white border-slate-200 border rounded-xl pt-8 pr-8 pb-8 pl-8">
+                    <div class="w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center text-orange-600 mb-6">
+                        <iconify-icon icon="solar:clock-circle-linear" width="24" height="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-medium text-slate-900 mb-2 tracking-tight">Schedule Precision</h3>
+                    <p class="text-base text-slate-500 leading-relaxed">Aggressive, realistic scheduling backed by proactive problem-solving. We anticipate delays before they happen to keep your rollout on track.</p>
+                </div>
+                <!-- Value 3 -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 hover:border-orange-500/50 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center text-orange-600 mb-6">
+                        <iconify-icon icon="solar:heart-linear" width="24" height="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-medium text-slate-900 mb-2 tracking-tight">Safety First</h3>
+                    <p class="text-base text-slate-500 leading-relaxed">A zero-incident culture driven by continuous OSHA training, rigorous site inspections, and empowering every worker to prioritize safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Credentials & Licensing -->
+    <section id="credentials" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Background Accents -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-600/5 blur-[100px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse shadow-[0_0_5px_rgba(234,88,12,0.8)]"></span>
+                        <span class="text-xs sm:text-sm text-orange-400 uppercase tracking-widest">Verified Credentials</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-medium tracking-tight text-white mb-4">Licensing &amp; Professional Data</h2>
+                    <p class="text-base sm:text-lg text-slate-400">Access our verified corporate documentation. Built-More LLC operates fully insured, bonded, and licensed across multiple jurisdictions to support national rollouts.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Licensing -->
+                <button onclick="openModal('modal-licensing')" class="text-left group relative bg-slate-800/50 backdrop-blur-md p-8 rounded-xl border border-slate-700 hover:border-orange-500/50 hover:bg-slate-800 transition-all focus:outline-none">
+                    <div class="absolute top-6 right-6 text-slate-500 group-hover:text-orange-400 transition-colors">
+                        <iconify-icon icon="solar:maximize-square-linear" width="20" height="20"></iconify-icon>
+                    </div>
+                    <div class="w-12 h-12 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:map-point-linear" width="24" height="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-medium text-white mb-2 tracking-tight">State Licensing</h3>
+                    <p class="text-base text-slate-400 mb-6">View our active General Contractor jurisdictions and operational limits.</p>
+                    <span class="text-xs sm:text-sm text-orange-400 uppercase tracking-wider flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                        View Details <iconify-icon icon="solar:arrow-right-linear" width="16" height="16"></iconify-icon>
+                    </span>
+                </button>
+
+                <!-- Card 2: Insurance -->
+                <button onclick="openModal('modal-insurance')" class="text-left group relative bg-slate-800/50 backdrop-blur-md p-8 rounded-xl border border-slate-700 hover:border-orange-500/50 hover:bg-slate-800 transition-all focus:outline-none">
+                    <div class="absolute top-6 right-6 text-slate-500 group-hover:text-orange-400 transition-colors">
+                        <iconify-icon icon="solar:maximize-square-linear" width="20" height="20"></iconify-icon>
+                    </div>
+                    <div class="w-12 h-12 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:shield-check-linear" width="24" height="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-medium text-white mb-2 tracking-tight">Insurance &amp; Bonding</h3>
+                    <p class="text-base text-slate-400 mb-6">Comprehensive general liability, workers comp, and surety capacities.</p>
+                    <span class="text-xs sm:text-sm text-orange-400 uppercase tracking-wider flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                        View Details <iconify-icon icon="solar:arrow-right-linear" width="16" height="16" class=""></iconify-icon>
+                    </span>
+                </button>
+
+                <!-- Card 3: Safety -->
+                <button onclick="openModal('modal-safety')" class="text-left group relative bg-slate-800/50 backdrop-blur-md p-8 rounded-xl border border-slate-700 hover:border-orange-500/50 hover:bg-slate-800 transition-all focus:outline-none">
+                    <div class="absolute top-6 right-6 text-slate-500 group-hover:text-orange-400 transition-colors">
+                        <iconify-icon icon="solar:maximize-square-linear" width="20" height="20"></iconify-icon>
+                    </div>
+                    <div class="w-12 h-12 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:user-rounded-linear" width="24" height="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-medium text-white mb-2 tracking-tight">Safety Protocol</h3>
+                    <p class="text-base text-slate-400 mb-6">OSHA certifications, EMR ratings, and site hazard mitigation plans.</p>
+                    <span class="text-xs sm:text-sm text-orange-400 uppercase tracking-wider flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                        View Details <iconify-icon icon="solar:arrow-right-linear" width="16" height="16"></iconify-icon>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <!-- Footer logo updated to have no background box -->
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/9a52d9e8-ed3b-431a-81c0-d76aa744263d_800w.png" alt="Built-More General Contractor Logo" class="h-6 sm:h-8 w-auto object-contain grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100 bg-transparent">
+                </div>
+                <div class="text-base">
+                    Contact: <a href="tel:6159152075" class="text-white hover:text-orange-400 transition-colors">(615) 915-2075</a>
+                </div>
+                <p class="text-sm">© 2023 Built-More Contracting LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS CONTAINER -->
+    <div id="modal-backdrop" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300" onclick="closeAllModals()"></div>
+
+    <!-- Modal 1: Licensing -->
+    <div id="modal-licensing" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 pointer-events-none">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden pointer-events-auto transform scale-95 opacity-0 transition-all duration-300 flex flex-col max-h-[90vh]" onclick="event.stopPropagation()">
+            <!-- Header -->
+            <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+                <h3 class="text-lg sm:text-xl font-medium tracking-tight text-slate-900 flex items-center gap-2">
+                    <iconify-icon icon="solar:map-point-linear" width="20" height="20" class="text-orange-600"></iconify-icon> Active Jurisdictions
+                </h3>
+                <button onclick="closeModal('modal-licensing')" class="text-slate-400 hover:text-slate-900 transition-colors p-1 rounded-md hover:bg-slate-100 flex items-center justify-center">
+                    <iconify-icon icon="solar:close-linear" width="24" height="24"></iconify-icon>
+                </button>
+            </div>
+            <!-- Body -->
+            <div class="p-6 overflow-y-auto [&amp;::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] text-base text-slate-600">
+                <p class="mb-4">Built-More LLC operates as a fully licensed Commercial General Contractor. We continually expand our licensing to support our clients' national growth strategies.</p>
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 mb-4">
+                    <h4 class="text-slate-900 mb-2">Primary Registered States</h4>
+                    <ul class="grid grid-cols-2 gap-2 text-sm">
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" width="16" height="16" class="text-green-500"></iconify-icon> Alabama</li>
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" width="16" height="16" class="text-green-500"></iconify-icon> Arkansas</li>
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" width="16" height="16" class="text-green-500"></iconify-icon> Florida</li>
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" width="16" height="16" class="text-green-500"></iconify-icon> Georgia</li>
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" width="16" height="16" class="text-green-500"></iconify-icon> Kentucky</li>
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" width="16" height="16" class="text-green-500"></iconify-icon> Mississippi</li>
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" width="16" height="16" class="text-green-500"></iconify-icon> North Carolina</li>
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" width="16" height="16" class="text-green-500"></iconify-icon> South Carolina</li>
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" width="16" height="16" class="text-green-500"></iconify-icon> Tennessee</li>
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" width="16" height="16" class="text-green-500"></iconify-icon> Texas</li>
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" width="16" height="16" class="text-green-500"></iconify-icon> Virginia</li>
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" width="16" height="16" class="text-green-500"></iconify-icon> *Expanding Quarterly</li>
+                    </ul>
+                </div>
+                <p class="text-sm text-slate-400 italic">Specific license numbers and reciprocal agreements are provided upon formal project bidding.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Insurance -->
+    <div id="modal-insurance" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 pointer-events-none">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden pointer-events-auto transform scale-95 opacity-0 transition-all duration-300 flex flex-col max-h-[90vh]" onclick="event.stopPropagation()">
+            <!-- Header -->
+            <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+                <h3 class="text-lg sm:text-xl font-medium tracking-tight text-slate-900 flex items-center gap-2">
+                    <iconify-icon icon="solar:shield-check-linear" width="20" height="20" class="text-orange-600"></iconify-icon> Insurance &amp; Bonding
+                </h3>
+                <button onclick="closeModal('modal-insurance')" class="text-slate-400 hover:text-slate-900 transition-colors p-1 rounded-md hover:bg-slate-100 flex items-center justify-center">
+                    <iconify-icon icon="solar:close-linear" width="24" height="24"></iconify-icon>
+                </button>
+            </div>
+            <!-- Body -->
+            <div class="p-6 overflow-y-auto [&amp;::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] text-base text-slate-600">
+                <p class="mb-5">Financial stability and comprehensive coverage protect our clients, our team, and the project. Certificates of Insurance (COI) are customized per project requirements.</p>
+                
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+                        <span class="text-slate-900">General Liability</span>
+                        <span class="text-slate-500 bg-slate-100 px-2 py-1 rounded text-sm">$5,000,000 Aggregate</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+                        <span class="text-slate-900">Worker's Compensation</span>
+                        <span class="text-slate-500 bg-slate-100 px-2 py-1 rounded text-sm">Statutory Limits</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+                        <span class="text-slate-900">Commercial Auto</span>
+                        <span class="text-slate-500 bg-slate-100 px-2 py-1 rounded text-sm">$1,000,000 Combined</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+                        <span class="text-slate-900">Umbrella / Excess</span>
+                        <span class="text-slate-500 bg-slate-100 px-2 py-1 rounded text-sm">Available per Contract</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-slate-900">Surety Bonding Capacity</span>
+                        <span class="text-sm bg-slate-100 px-2 py-1 rounded text-green-700 bg-green-50 border border-green-200">A-Rated Treasury</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Safety -->
+    <div id="modal-safety" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 pointer-events-none">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden pointer-events-auto transform scale-95 opacity-0 transition-all duration-300 flex flex-col max-h-[90vh]" onclick="event.stopPropagation()">
+            <!-- Header -->
+            <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+                <h3 class="text-lg sm:text-xl font-medium tracking-tight text-slate-900 flex items-center gap-2">
+                    <iconify-icon icon="solar:user-rounded-linear" width="20" height="20" class="text-orange-600"></iconify-icon> Corporate Safety
+                </h3>
+                <button onclick="closeModal('modal-safety')" class="text-slate-400 hover:text-slate-900 transition-colors p-1 rounded-md hover:bg-slate-100 flex items-center justify-center">
+                    <iconify-icon icon="solar:close-linear" width="24" height="24"></iconify-icon>
+                </button>
+            </div>
+            <!-- Body -->
+            <div class="p-6 overflow-y-auto [&amp;::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] text-base text-slate-600">
+                <p class="mb-4">Our zero-incident policy is maintained through aggressive proactive planning rather than reactive management.</p>
+                
+                <div class="grid gap-3 mb-4">
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex gap-3 items-start">
+                        <iconify-icon icon="solar:shield-warning-linear" width="20" height="20" class="text-orange-600 mt-0.5"></iconify-icon>
+                        <div>
+                            <h4 class="text-slate-900 text-sm uppercase tracking-wider mb-1">OSHA Certification</h4>
+                            <p class="text-sm">All Project Managers and Site Superintendents maintain mandatory OSHA 30-Hour certifications.</p>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex gap-3 items-start">
+                        <iconify-icon icon="solar:chart-square-linear" width="20" height="20" class="text-orange-600 mt-0.5"></iconify-icon>
+                        <div>
+                            <h4 class="text-slate-900 text-sm uppercase tracking-wider mb-1">EMR Rating</h4>
+                            <p class="text-sm">Consistently maintaining an Experience Modification Rate (EMR) well below the industry standard of 1.0.</p>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex gap-3 items-start">
+                        <iconify-icon icon="solar:clipboard-check-linear" width="20" height="20" class="text-orange-600 mt-0.5"></iconify-icon>
+                        <div>
+                            <h4 class="text-slate-900 text-sm uppercase tracking-wider mb-1">Site Protocols</h4>
+                            <p class="text-sm">Mandatory weekly tailgate meetings, daily hazard analysis (JHA), and strict subcontractor vetting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script for Modal Logic -->
+    <script>
+        let currentModal = null;
+        
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            const backdrop = document.getElementById('modal-backdrop');
+            
+            if (!modal || !backdrop) return;
+            
+            backdrop.classList.remove('hidden');
+            modal.classList.remove('hidden');
+            
+            void modal.offsetWidth;
+            
+            backdrop.classList.remove('opacity-0');
+            modal.querySelector('div').classList.remove('opacity-0', 'scale-95');
+            modal.querySelector('div').classList.add('opacity-100', 'scale-100');
+            
+            currentModal = modalId;
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            const backdrop = document.getElementById('modal-backdrop');
+            
+            if (!modal || !backdrop) return;
+            
+            backdrop.classList.add('opacity-0');
+            modal.querySelector('div').classList.remove('opacity-100', 'scale-100');
+            modal.querySelector('div').classList.add('opacity-0', 'scale-95');
+            
+            setTimeout(() => {
+                backdrop.classList.add('hidden');
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+                currentModal = null;
+            }, 300);
+        }
+        
+        function closeAllModals() {
+            if (currentModal) {
+                closeModal(currentModal);
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && currentModal) {
+                closeAllModals();
+            }
+        });
+    </script>
+
+
+</body></html>

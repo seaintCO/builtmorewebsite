@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUILT-MORE Contracting | Commercial Construction Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+input[type=range] {
+-webkit-appearance: none;
+width: 100%;
+background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+-webkit-appearance: none;
+height: 1rem;
+width: 1rem;
+border-radius: 50%;
+background: #ea580c;
+cursor: pointer;
+margin-top: -0.375rem;
+box-shadow: 0 0 10px rgba(234, 88, 12, 0.5);
+transition: transform 0.1s;
+}
+input[type=range]::-webkit-slider-thumb:active {
+transform: scale(1.2);
+}
+input[type=range]::-webkit-slider-runnable-track {
+width: 100%;
+height: 0.25rem;
+cursor: pointer;
+background: #334155;
+border-radius: 9999px;
+}
+/* Holographic OS Effects */
+@keyframes scanline {
+0% { transform: translateY(-100%); }
+100% { transform: translateY(100vh); }
+}
+.holo-grid {
+background-size: 50px 50px;
+background-image:
+linear-gradient(to right, rgba(234, 88, 12, 0.1) 1px, transparent 1px),
+linear-gradient(to bottom, rgba(234, 88, 12, 0.1) 1px, transparent 1px);
+transform: perspective(1000px) rotateX(60deg) translateY(-100px) translateZ(-200px);
+transform-origin: top center;
+animation: holoPulse 4s ease-in-out infinite alternate;
+}
+.holo-scan {
+animation: scanline 6s linear infinite;
+}
+@keyframes holoPulse {
+0% { opacity: 0.3; }
+100% { opacity: 0.7; }
+}
+@keyframes float3D {
+0% { transform: translateY(0px) rotateX(0deg); }
+50% { transform: translateY(-20px) rotateX(2deg); }
+100% { transform: translateY(0px) rotateX(0deg); }
+}
+.animate-float-3d {
+animation: float3D 6s ease-in-out infinite;
+}
+</style></head>
+<body class="antialiased selection:bg-orange-600/30 selection:text-orange-900 text-slate-900 bg-slate-50 scroll-smooth">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 border-b border-white/10 bg-slate-900/80 backdrop-blur-md transition-all">
+        <div class="flex h-20 max-w-7xl mx-auto px-6 items-center justify-between">
+            <!-- Link back to home page -->
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+                <span class="text-white text-xl font-semibold tracking-tighter">BUILT-MORE</span>
+            </a>
+            
+            <div class="flex items-center gap-6">
+                <a href="tel:6159152075" class="hidden md:flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors">
+                    <iconify-icon icon="solar:phone-calling-linear" class="text-lg" style="stroke-width: 1.5;"></iconify-icon>
+                    (615) 915-2075
+                </a>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-white active:scale-95 transition-transform">
+                    <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl" style="stroke-width: 1.5;"></iconify-icon>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-20 h-screen bg-slate-950/95 backdrop-blur-md z-40 border-t border-white/10 overflow-y-auto pb-24">
+            <div class="flex flex-col p-6 gap-6">
+                <a href="#projects" class="text-lg font-medium text-slate-200 mobile-link border-b border-white/10 pb-4">Project Matrix Gallery</a>
+                <a href="#portfolio-profiles" class="text-lg font-medium text-slate-200 mobile-link border-b border-white/10 pb-4">Featured Profiles</a>
+                <a href="tel:6159152075" class="flex items-center gap-3 text-lg font-medium text-slate-200 mobile-link border-b border-white/10 pb-4">
+                    <iconify-icon icon="solar:phone-calling-linear" class="text-xl text-orange-500" style="stroke-width: 1.5;"></iconify-icon>
+                    (615) 915-2075
+                </a>
+                <a href="tel:6159152075" class="inline-flex items-center justify-center px-5 py-3.5 text-base font-medium text-white bg-orange-600 hover:bg-orange-700 rounded-md shadow-lg shadow-orange-900/20 w-full text-center mt-2 mobile-link transition-all active:scale-95">
+                    Request Estimate
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Holographic Hero Section (Portfolio Focused) -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-slate-950">
+        
+        <!-- 3D Holographic Environment -->
+        <div class="absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none">
+            <!-- Perspective Grid -->
+            <div class="absolute inset-0 h-[200%] -top-[50%] w-[200%] -left-[50%] holo-grid"></div>
+            
+            <!-- Hologram Glowing Core -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-orange-600/10 blur-[100px] rounded-full"></div>
+            
+            <!-- 3D Wireframe Model SVG -->
+            <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] text-orange-500/40 drop-shadow-[0_0_15px_rgba(234,88,12,0.6)] animate-float-3d" viewBox="0 0 800 600" fill="none" stroke="currentColor" stroke-width="1.5">
+                <!-- Base Foundation -->
+                <path d="M400 500 L700 350 L400 200 L100 350 Z" class="animate-pulse" stroke-dasharray="4 4"></path>
+                <path d="M400 480 L680 340 L400 200 L120 340 Z"></path>
+                
+                <!-- Vertical Columns -->
+                <path d="M100 350 L100 150 M400 500 L400 300 M700 350 L700 150 M400 200 L400 50"></path>
+                
+                <!-- Floor Levels -->
+                <path d="M150 300 L400 425 L650 300 L400 175 Z" opacity="0.6"></path>
+                <path d="M150 250 L400 375 L650 250 L400 125 Z" opacity="0.6"></path>
+                <path d="M150 200 L400 325 L650 200 L400 75 Z" opacity="0.6"></path>
+                
+                <!-- Top Roof Face -->
+                <path d="M400 300 L700 150 L400 0 L100 150 Z"></path>
+                
+                <!-- Facade Wireframe details -->
+                <path d="M100 350 L400 500 M100 300 L400 450 M100 250 L400 400 M100 200 L400 350" opacity="0.3"></path>
+                <path d="M700 350 L400 500 M700 300 L400 450 M700 250 L400 400 M700 200 L400 350" opacity="0.3"></path>
+            </svg>
+
+            <!-- Holographic Scanline -->
+            <div class="absolute inset-0 w-full h-8 bg-gradient-to-b from-transparent via-orange-500/20 to-transparent holo-scan blur-sm mix-blend-screen"></div>
+            
+            <!-- Vignette Fade -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#020617_70%)]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center mt-20">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/80 border border-orange-500/30 backdrop-blur-md text-xs font-medium text-orange-400 mb-8 shadow-[0_0_15px_rgba(234,88,12,0.2)]">
+                <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse shadow-[0_0_5px_rgba(234,88,12,0.8)]"></span>
+                System Online: Portfolio Database
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight font-semibold text-white tracking-tight mb-6 drop-shadow-2xl">
+                Commercial Construction <br class="hidden md:block">Project Portfolio.
+            </h1>
+            <p class="text-base md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 drop-shadow-md">
+                Explore a visual extraction of our recent national buildouts, demonstrating 30+ years of engineered precision across restaurants, retail, and fitness facilities.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 bg-orange-600 hover:bg-orange-500 text-white text-sm font-medium rounded-md transition-all active:scale-95 shadow-[0_0_20px_rgba(234,88,12,0.4)] hover:shadow-[0_0_30px_rgba(234,88,12,0.6)]">
+                    View Project Matrix
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="py-12 border-b border-slate-200 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-center text-xs font-medium text-slate-400 uppercase tracking-widest mb-8">Verified Corporate Partners</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
+                <span class="text-lg sm:text-xl font-semibold tracking-tighter text-slate-800 cursor-default hover:text-orange-600 transition-colors">VELOCE</span>
+                <span class="text-lg sm:text-xl font-semibold tracking-tighter text-slate-800 cursor-default hover:text-orange-600 transition-colors">PLANET FITNESS</span>
+                <span class="text-lg sm:text-xl font-semibold tracking-tighter text-slate-800 cursor-default hover:text-orange-600 transition-colors">JET'S PIZZA</span>
+                <span class="text-lg sm:text-xl font-semibold tracking-tighter text-slate-800 cursor-default hover:text-orange-600 transition-colors">RALLY'S</span>
+                <span class="text-lg sm:text-xl font-semibold tracking-tighter text-slate-800 cursor-default hover:text-orange-600 transition-colors">CHICK-FIL-A</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expanded Portfolio / Project Database -->
+    <section class="text-white bg-slate-950 border-slate-800 border-t pt-24 pb-24" id="projects">
+        
+    </section>
+
+    <!-- Detailed Portfolio Profiles (Featured Case Studies) -->
+    <section class="py-24 bg-slate-900 border-t border-slate-800" id="portfolio-profiles">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center gap-3 mb-16">
+                <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse shadow-[0_0_5px_rgba(234,88,12,0.8)]"></span>
+                <span class="text-xs font-medium text-orange-400 uppercase tracking-widest">Featured Portfolio Profiles</span>
+            </div>
+
+            <!-- Profile 1: Jet's Pizza (Image Left) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32">
+                <!-- Image side -->
+                <div class="relative rounded-2xl overflow-hidden group border border-slate-800 shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent z-10 pointer-events-none"></div>
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/58d53be9-ca3d-4ae0-8f11-14a27a92c8c6_1600w.webp?w=800&amp;q=80" alt="Jet's Pizza Buildout Birmingham AL" class="sm:h-[400px] md:h-[500px] group-hover:scale-105 transition-transform duration-700 w-full h-[300px] object-cover">
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <div class="flex items-center gap-2 text-slate-300 text-xs font-mono mb-2">
+                            <iconify-icon icon="solar:map-point-linear" style="stroke-width: 1.5;"></iconify-icon>
+                            COORD: 33.5186° N, 86.8104° W
+                        </div>
+                        <div class="text-white text-xl font-semibold tracking-tight">Birmingham, AL</div>
+                    </div>
+                </div>
+
+                <!-- Content side -->
+                <div class="">
+                    <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight mb-6">Jet's Pizza Franchise</h2>
+                    <p class="text-slate-400 text-base mb-8 leading-relaxed">
+                        A complete interior tenant buildout executing strict brand standards for Jet's Pizza. This high-performance food service facility required specialized commercial kitchen infrastructure, Type 1 hood ventilation systems, custom FRP wall installations, and integrated MEP routing to support high-volume commercial production, all delivered on an accelerated franchise timeline.
+                    </p>
+
+                    <!-- Metrics Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-6 mb-10">
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Classification</div>
+                            <div class="text-slate-200 font-medium">Restaurant Buildout</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Client Partner</div>
+                            <div class="text-slate-200 font-medium">Jet's America, Inc.</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Location</div>
+                            <div class="text-slate-200 font-medium">Birmingham, AL</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Key Scope</div>
+                            <div class="text-slate-200 font-medium">Commercial Kitchen, FRP</div>
+                        </div>
+                    </div>
+
+                    <a href="tel:6159152075" class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-md transition-all active:scale-95 group">
+                        Call us for an estimate
+                        <iconify-icon icon="solar:arrow-right-linear" class="ml-2 group-hover:translate-x-1 transition-transform" style="stroke-width: 1.5;"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile 2: Planet Fitness Daphne (Image Right on Desktop) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32">
+                <div class="relative rounded-2xl overflow-hidden group border border-slate-800 shadow-2xl lg:order-last">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent z-10 pointer-events-none"></div>
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a1f75570-0519-4fb5-8241-f06b3cf5c8e3_1600w.webp?w=800&amp;q=80" alt="Planet Fitness Daphne AL" class="sm:h-[400px] md:h-[500px] group-hover:scale-105 transition-transform duration-700 w-full h-[300px] object-cover bg-center">
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <div class="flex items-center gap-2 text-slate-300 text-xs font-mono mb-2">
+                            <iconify-icon icon="solar:map-point-linear" style="stroke-width: 1.5;" class=""></iconify-icon>
+                            COORD: 30.6034° N, 87.9036° W
+                        </div>
+                        <div class="text-white text-xl font-semibold tracking-tight">Daphne, AL</div>
+                    </div>
+                </div>
+
+                <div class="lg:order-first">
+                    <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight mb-6">Planet Fitness</h2>
+                    <p class="text-slate-400 text-base mb-8 leading-relaxed">
+                        Large-scale interior fit-out for a premier Planet Fitness location. The scope involved extensive demolition and space reconfiguration, installation of specialized athletic rubber flooring, custom architectural elements, and high-end locker room facilities with modern plumbing infrastructure. Upgraded HVAC systems were integrated to maintain optimal environmental control for a high-capacity fitness environment.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-6 mb-10">
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Classification</div>
+                            <div class="text-slate-200 font-medium">Fitness Center</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Client Partner</div>
+                            <div class="text-slate-200 font-medium">Planet Fitness</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Location</div>
+                            <div class="text-slate-200 font-medium">Daphne, AL</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Key Scope</div>
+                            <div class="text-slate-200 font-medium">Athletic Flooring, MEP</div>
+                        </div>
+                    </div>
+
+                    <a href="tel:6159152075" class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-md transition-all active:scale-95 group">
+                        Call us for an estimate
+                        <iconify-icon icon="solar:arrow-right-linear" class="ml-2 group-hover:translate-x-1 transition-transform" style="stroke-width: 1.5;"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile 3: Veloce Speedway (Image Left) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32">
+                <div class="relative rounded-2xl overflow-hidden group border border-slate-800 shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent z-10 pointer-events-none"></div>
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1773302e-46f6-4109-b13b-afc9dc1fd800_1600w.webp" alt="Veloce Indoor Speedway Huntsville" class="sm:h-[400px] md:h-[500px] group-hover:scale-105 transition-transform duration-700 w-full h-[300px] object-cover bg-center">
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <div class="flex items-center gap-2 text-slate-300 text-xs font-mono mb-2">
+                            <iconify-icon icon="solar:map-point-linear" style="stroke-width: 1.5;"></iconify-icon>
+                            COORD: 34.7304° N, 86.5861° W
+                        </div>
+                        <div class="text-white text-xl font-semibold tracking-tight">Huntsville, AL</div>
+                    </div>
+                </div>
+
+                <div class="">
+                    <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight mb-6">Veloce Indoor Speedway</h2>
+                    <p class="text-slate-400 text-base mb-8 leading-relaxed">
+                        Transformation of a massive warehouse shell into a state-of-the-art indoor electric karting facility. This project required specialized concrete treatment for the racing surface, installation of high-impact safety barrier systems, advanced timing and scoring infrastructure, and a modern customer lounge featuring retail spaces, viewing decks, and custom lighting packages to enhance the high-speed atmosphere.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-6 mb-10">
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Classification</div>
+                            <div class="text-slate-200 font-medium">Entertainment Facility</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Client Partner</div>
+                            <div class="text-slate-200 font-medium">Veloce Speedway</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Location</div>
+                            <div class="text-slate-200 font-medium">Huntsville, AL</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Key Scope</div>
+                            <div class="text-slate-200 font-medium">Track Systems, Retail</div>
+                        </div>
+                    </div>
+
+                    <a href="tel:6159152075" class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-md transition-all active:scale-95 group">
+                        Call us for an estimate
+                        <iconify-icon icon="solar:arrow-right-linear" class="ml-2 group-hover:translate-x-1 transition-transform" style="stroke-width: 1.5;"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile 4: Planet Fitness Mobile (Image Right on Desktop) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32">
+                <div class="relative rounded-2xl overflow-hidden group border border-slate-800 shadow-2xl lg:order-last">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent z-10 pointer-events-none"></div>
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a1f75570-0519-4fb5-8241-f06b3cf5c8e3_1600w.webp" alt="Planet Fitness Dauphin St Mobile AL" class="sm:h-[400px] md:h-[500px] group-hover:scale-105 transition-transform duration-700 w-full h-[300px] object-cover bg-center">
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <div class="flex items-center gap-2 text-slate-300 text-xs font-mono mb-2">
+                            <iconify-icon icon="solar:map-point-linear" style="stroke-width: 1.5;"></iconify-icon>
+                            COORD: 30.6954° N, 88.0399° W
+                        </div>
+                        <div class="text-white text-xl font-semibold tracking-tight">Mobile, AL</div>
+                    </div>
+                </div>
+
+                <div class="lg:order-first">
+                    <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight mb-6">Planet Fitness (Dauphin St)</h2>
+                    <p class="text-slate-400 text-base mb-8 leading-relaxed">
+                        Comprehensive commercial renovation to establish a new Planet Fitness flagship in Mobile. The buildout features the signature 'Black Card Spa' area including tanning and massage facilities, a vast open-concept gym floor, upgraded exterior facade elements conforming to corporate branding, and energy-efficient LED lighting systems tailored to the franchise's strict aesthetic guidelines.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-6 mb-10">
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Classification</div>
+                            <div class="text-slate-200 font-medium">Fitness Center</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Client Partner</div>
+                            <div class="text-slate-200 font-medium">Planet Fitness</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Location</div>
+                            <div class="text-slate-200 font-medium">Mobile, AL</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Key Scope</div>
+                            <div class="text-slate-200 font-medium">Black Card Spa, Facade</div>
+                        </div>
+                    </div>
+
+                    <a href="tel:6159152075" class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-md transition-all active:scale-95 group">
+                        Call us for an estimate
+                        <iconify-icon icon="solar:arrow-right-linear" class="ml-2 group-hover:translate-x-1 transition-transform" style="stroke-width: 1.5;"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile 5: World of Beer Woodhaven (Image Left) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32">
+                <div class="relative rounded-2xl overflow-hidden group border border-slate-800 shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent z-10 pointer-events-none"></div>
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/41961e88-8c2c-4f04-a710-d997625fe097_1600w.webp" alt="World of Beer Woodhaven MI" class="sm:h-[400px] md:h-[500px] group-hover:scale-105 transition-transform duration-700 w-full h-[300px] object-cover bg-center">
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <div class="flex items-center gap-2 text-slate-300 text-xs font-mono mb-2">
+                            <iconify-icon icon="solar:map-point-linear" style="stroke-width: 1.5;"></iconify-icon>
+                            COORD: 42.1353° N, 83.2383° W
+                        </div>
+                        <div class="text-white text-xl font-semibold tracking-tight">Woodhaven, MI</div>
+                    </div>
+                </div>
+
+                <div class="">
+                    <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight mb-6">World of Beer</h2>
+                    <p class="text-slate-400 text-base mb-8 leading-relaxed">
+                        High-end restaurant and bar buildout featuring extensive custom millwork, complex draft beer delivery systems, and a fully integrated commercial kitchen. The space required specialized MEP engineering to support high-capacity refrigeration, atmospheric controls, and premium interior architectural details designed to elevate the guest experience.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-6 mb-10">
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Classification</div>
+                            <div class="text-slate-200 font-medium">Restaurant / Bar</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Client Partner</div>
+                            <div class="text-slate-200 font-medium">World of Beer</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Location</div>
+                            <div class="text-slate-200 font-medium">Woodhaven, MI</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Key Scope</div>
+                            <div class="text-slate-200 font-medium">Custom Millwork, Draft Systems</div>
+                        </div>
+                    </div>
+
+                    <a href="tel:6159152075" class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-md transition-all active:scale-95 group">
+                        Call us for an estimate
+                        <iconify-icon icon="solar:arrow-right-linear" class="ml-2 group-hover:translate-x-1 transition-transform" style="stroke-width: 1.5;"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile 7: Rally's Brook Park (Image Left) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="relative rounded-2xl overflow-hidden group border border-slate-800 shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent z-10 pointer-events-none"></div>
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ed4867e8-6c41-4146-80b5-0a61a0d9a58a_1600w.webp?w=800&amp;q=80" alt="Rally's Brook Park OH" class="sm:h-[400px] md:h-[500px] group-hover:scale-105 transition-transform duration-700 w-full h-[300px] object-cover bg-center">
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <div class="flex items-center gap-2 text-slate-300 text-xs font-mono mb-2">
+                            <iconify-icon icon="solar:map-point-linear" style="stroke-width: 1.5;"></iconify-icon>
+                            COORD: 41.4012° N, 81.8029° W
+                        </div>
+                        <div class="text-white text-xl font-semibold tracking-tight">Brook Park, OH</div>
+                    </div>
+                </div>
+
+                <div class="">
+                    <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight mb-6">Rally's Drive-Thru</h2>
+                    <p class="text-slate-400 text-base mb-8 leading-relaxed">
+                        Ground-up modular construction and site development for QSR drive-thru prototype. Scope included complete site work, utility trenching, specialized foundation pouring, and rapid timeline execution for immediate operational turnover. Precision craning and modular integration ensured minimal neighborhood disruption.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-6 mb-10">
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Classification</div>
+                            <div class="text-slate-200 font-medium">QSR / Drive-Thru</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Client Partner</div>
+                            <div class="text-slate-200 font-medium">Rally's</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Location</div>
+                            <div class="text-slate-200 font-medium">Brook Park, OH</div>
+                        </div>
+                        <div class="border-l-2 border-orange-500 pl-4">
+                            <div class="text-xs text-slate-500 uppercase tracking-widest mb-1 font-medium">Key Scope</div>
+                            <div class="text-slate-200 font-medium">Modular Set, Site Work</div>
+                        </div>
+                    </div>
+
+                    <a href="tel:6159152075" class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-md transition-all active:scale-95 group">
+                        Call us for an estimate
+                        <iconify-icon icon="solar:arrow-right-linear" class="ml-2 group-hover:translate-x-1 transition-transform" style="stroke-width: 1.5;"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- More Projects Coming Soon Section -->
+    <section class="py-24 border-t border-slate-800 bg-slate-950 text-center relative overflow-hidden" id="coming-soon">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(234,88,12,0.03)_0%,transparent_60%)]"></div>
+        <div class="max-w-3xl mx-auto px-6 relative z-10">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-900 border border-slate-800 mb-8 shadow-[0_0_20px_rgba(255,255,255,0.02)]">
+                <iconify-icon icon="solar:clock-circle-linear" class="text-3xl text-slate-400" style="stroke-width: 1.5;"></iconify-icon>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight mb-6">More Projects Initiating.</h2>
+            <p class="text-slate-400 text-base md:text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
+                Our operations database is continually expanding with new national buildouts. Check back soon for additional featured commercial construction profiles showcasing our engineered precision.
+            </p>
+            <a href="tel:6159152075" class="inline-flex items-center justify-center px-8 py-3.5 bg-orange-600 hover:bg-orange-500 text-white text-sm font-medium rounded-md transition-all active:scale-95 shadow-[0_0_20px_rgba(234,88,12,0.4)] hover:shadow-[0_0_30px_rgba(234,88,12,0.6)] group">
+                Call us for an estimate
+                <iconify-icon icon="solar:phone-calling-linear" class="ml-2 text-lg group-hover:scale-110 transition-transform" style="stroke-width: 1.5;"></iconify-icon>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-1">
+                    <span class="text-white text-xl font-semibold tracking-tighter block mb-4">BUILT-MORE</span>
+                    <p class="text-xs leading-relaxed mb-6">Premier commercial general contracting, engineering high-performance facilities nationwide.</p>
+                </div>
+                
+                <div class="">
+                    <h4 class="text-white text-sm font-medium mb-4">System Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class=""><a href="#projects" class="hover:text-white transition-colors">Project Matrix</a></li>
+                        <li class=""><a href="#services" class="hover:text-white transition-colors">Capabilities</a></li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <h4 class="text-white text-sm font-medium mb-4">Partner Hub</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#subcontractor" class="hover:text-white transition-colors">Portal Login</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Bid Room</a></li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <h4 class="text-white text-sm font-medium mb-4">Command Center</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tel:6159152075" class="hover:text-white transition-colors">(615) 915-2075</a></li>
+                        <li class="">estimator@builtmore.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <p class="text-xs">© 2023 Built-More Contracting. All rights reserved.</p>
+                <div class="text-[10px] uppercase text-slate-600 tracking-widest font-mono">Secured Connection</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                document.body.classList.toggle('overflow-hidden'); // Prevent background scrolling
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                });
+            });
+        }
+
+        // Functional Video Logic
+        window.playTimelapse = function() {
+            // Hide cover and button
+            const videoCover = document.getElementById('video-cover');
+            const videoOverlay = document.getElementById('video-overlay');
+            const videoBtn = document.getElementById('video-btn');
+            const videoInfo = document.getElementById('video-info');
+            const iframe = document.getElementById('video-iframe');
+            const videoContainer = document.getElementById('video-container');
+
+            if (videoCover) videoCover.classList.add('hidden');
+            if (videoOverlay) videoOverlay.classList.add('hidden');
+            if (videoBtn) videoBtn.classList.add('hidden');
+            if (videoInfo) videoInfo.classList.add('hidden');
+            
+            // Show and play iframe
+            if (iframe) {
+                iframe.classList.remove('hidden');
+                iframe.src += "&autoplay=1&mute=1"; // triggers autoplay
+            }
+            
+            // Remove click listener so it doesn't trigger again
+            if (videoContainer) {
+                videoContainer.onclick = null;
+                videoContainer.classList.remove('cursor-pointer');
+            }
+        }
+    </script>
+</body></html>
