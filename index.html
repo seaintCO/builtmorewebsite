@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BUILT-MORE Contracting | Commercial Construction</title>
@@ -74,9 +73,9 @@ animation: float3D 6s ease-in-out infinite;
                 <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/297cea36-c245-448b-a660-2a4560275a76_320w.png" alt="BUILT-MORE Logo" class="w-auto h-10">
                 <span class="text-white text-xl font-medium tracking-tight">BUILT-MORE</span>
             </div>
-            <div class="hidden md:flex items-center gap-8 text-sm font-normal text-slate-300">
-                <a href="about-us-2.html" class="hover:text-white transition-colors">About Us</a>
-                <a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a>
+            <div class="hidden md:flex gap-8 text-sm font-normal text-slate-300 gap-x-8 gap-y-8 items-center">
+                <a href="/about-us-2" class="hover:text-white transition-colors">About Us</a>
+                <a href="/portfolio" class="hover:text-white transition-colors">Portfolio</a>
                 <a href="#contact" class="hover:text-white transition-colors">Contact</a>
             </div>
             <div class="flex items-center gap-6">
@@ -84,27 +83,12 @@ animation: float3D 6s ease-in-out infinite;
                     <iconify-icon icon="solar:phone-calling-linear" class="text-lg" style="stroke-width: 1.5;"></iconify-icon>
                     (615) 915-2075
                 </a>
-                
-                <button id="mobile-menu-btn" class="md:hidden text-white active:scale-95 transition-transform" onclick="toggleMobileMenu()">
-                    <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl" style="stroke-width: 1.5;"></iconify-icon>
-                </button>
             </div>
-        </div>
-        
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-white/10 px-6 py-4 space-y-4">
-            <a href="about.html" class="block text-sm font-normal text-slate-300 hover:text-white transition-colors">About Us</a>
-            <a href="#projects" class="block text-sm font-normal text-slate-300 hover:text-white transition-colors">Portfolio</a>
-            <a href="#contact" class="block text-sm font-normal text-slate-300 hover:text-white transition-colors">Contact Us</a>
-            <a href="tel:6159152075" class="block flex items-center gap-2 text-sm font-normal text-slate-300 hover:text-white transition-colors">
-                <iconify-icon icon="solar:phone-calling-linear" class="text-lg" style="stroke-width: 1.5;"></iconify-icon>
-                (615) 915-2075
-            </a>
         </div>
     </nav>
 
     <!-- Holographic Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-slate-950">
+    <section class="flex overflow-hidden bg-slate-950 h-screen relative items-center justify-center">
         
         <!-- 3D Holographic Environment -->
         <div class="absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none">
@@ -154,10 +138,12 @@ animation: float3D 6s ease-in-out infinite;
             <p class="text-sm sm:text-base md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 drop-shadow-md">
                 30+ years engineering restaurants, retail, fitness centers, and commercial facilities across the United States.
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                
-                <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-600/50 text-white text-sm font-normal rounded-md backdrop-blur-md transition-all active:scale-95">
-                    View Matrix Portfolio
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                <a href="/about-us-2" class="w-full sm:w-auto px-8 py-3.5 bg-orange-600/80 hover:bg-orange-500 border border-orange-500/50 text-white text-sm font-normal rounded-md backdrop-blur-md transition-all active:scale-95">
+                    About Us
+                </a>
+                <a href="/portfolio" class="w-full sm:w-auto px-8 py-3.5 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-600/50 text-white text-sm font-normal rounded-md backdrop-blur-md transition-all active:scale-95">
+                    View Portfolio
                 </a>
             </div>
         </div>
@@ -331,12 +317,6 @@ animation: float3D 6s ease-in-out infinite;
         </div>
     </section>
 
-    <!-- Featured Case Study: Jet's Pizza Birmingham -->
-    
-
-    <!-- Subcontractor Portal & Functional Timelapse Section -->
-    
-
     <!-- Email Us / Contact Section -->
     <section id="contact" class="py-24 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-6">
@@ -447,8 +427,8 @@ animation: float3D 6s ease-in-out infinite;
                 <div>
                     <h4 class="text-white text-sm font-normal mb-4">System Links</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="about.html" class="hover:text-white transition-colors font-normal">About Us</a></li>
-                        <li><a href="#projects" class="hover:text-white transition-colors font-normal">Portfolio</a></li>
+                        <li><a href="/about-us-2" class="hover:text-white transition-colors font-normal">About Us</a></li>
+                        <li><a href="/portfolio" class="hover:text-white transition-colors font-normal">Portfolio</a></li>
                         <li><a href="#services" class="hover:text-white transition-colors font-normal">Capabilities</a></li>
                     </ul>
                 </div>
@@ -478,12 +458,6 @@ animation: float3D 6s ease-in-out infinite;
     </footer>
 
     <script>
-        // Mobile Menu Logic
-        window.toggleMobileMenu = function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
         // Functional Video Logic
         window.playTimelapse = function() {
             // Hide cover and button
@@ -494,12 +468,17 @@ animation: float3D 6s ease-in-out infinite;
             
             // Show and play iframe
             const iframe = document.getElementById('video-iframe');
-            iframe.classList.remove('hidden');
-            iframe.src += "&autoplay=1&mute=1"; // triggers autoplay
+            if (iframe) {
+                iframe.classList.remove('hidden');
+                iframe.src += "&autoplay=1&mute=1"; // triggers autoplay
+            }
             
             // Remove click listener so it doesn't trigger again
-            document.getElementById('video-container').onclick = null;
-            document.getElementById('video-container').classList.remove('cursor-pointer');
+            const container = document.getElementById('video-container');
+            if (container) {
+                container.onclick = null;
+                container.classList.remove('cursor-pointer');
+            }
         }
     </script>
 
